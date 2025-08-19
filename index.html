@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>US-TRADE — Información responsable sobre trading algorítmico</title>
+  <meta name="description" content="US-TRADE: guía informativa sobre trading algorítmico, bots de trading y cómo evaluar proveedores - contenido neutro y no afiliado.">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa6b2; --accent:#0ea5a4; --glass: rgba(255,255,255,0.03);
+      --radius:14px; --maxw:1000px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,#07101a 0%, #071826 100%);color:#e6eef6;line-height:1.5}
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo-blob{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#036b6a);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021018}
+    h1{font-size:20px;margin:0}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-size:14px}
+
+    .hero{background:var(--glass);padding:22px;border-radius:var(--radius);display:grid;grid-template-columns:1fr;gap:12px}
+    .hero p{margin:0;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+    main{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+    aside{background:rgba(255,255,255,0.02);padding:16px;border-radius:12px;height:fit-content}
+
+    section h2{margin-top:0;color:#dff2f1}
+    .card{background:rgba(255,255,255,0.01);padding:14px;border-radius:12px;margin-bottom:12px}
+
+    ul.check{padding-left:18px;margin:10px 0;color:var(--muted)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#021018;text-decoration:none;font-weight:600}
+
+    .disclaimer{font-size:13px;color:#ffdfdf;background:rgba(255,223,223,0.04);padding:10px;border-radius:10px}
+
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr}
+      .brand h1{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo-blob">US</div>
+        <div>
+          <h1>US-TRADE</h1>
+          <div style="color:var(--muted);font-size:13px">Información neutra sobre trading algorítmico y evaluación de servicios</div>
+        </div>
+      </div>
+      <nav aria-label="navegación principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#evaluar">Evaluar</a>
+        <a href="#riesgos">Riesgos</a>
+      </nav>
+    </header>
+
+    <div class="hero" role="region" aria-labelledby="hero-title">
+      <div>
+        <h2 id="hero-title">Guía informativa — trading algorítmico y bots</h2>
+        <p>Esta página ofrece información general y buenas prácticas para entender qué son los bots de trading, cómo evaluar plataformas y reconocer señales de riesgos o suplantación. No somos afiliados ni representantes de ningún proveedor citado.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <main>
+        <section id="sobre" class="card">
+          <h2>¿Qué es un bot de trading?</h2>
+          <p>Un bot de trading es un software que ejecuta órdenes de compra/venta automáticamente según reglas predefinidas (estrategias de momentum, arbitraje, market making, etc.). Pueden facilitar la ejecución 24/7, pero su desempeño depende de la estrategia, la calidad de datos y la infraestructura.</p>
+        </section>
+
+        <section id="evaluar" class="card">
+          <h2>Cómo evaluar una plataforma o servicio</h2>
+          <p>A la hora de valorar un proveedor, busca pruebas y documentación verificable. Aquí tienes un listado práctico:</p>
+          <ul class="check">
+            <li>Transparencia: información sobre la empresa, responsables y condiciones legales.</li>
+            <li>Reputación: búsquedas en prensa independiente, foros y reseñas verificables.</li>
+            <li>Seguridad: uso de APIs con claves separadas, autenticación de dos factores, y almacenamiento de fondos propio (no custodial) cuando sea aplicable.</li>
+            <li>Condiciones comerciales: tarifas, comisiones y políticas de reembolso claras.</li>
+            <li>Pruebas técnicas: documentación, pruebas en modo demo o backtests reproducibles con datos públicos.</li>
+          </ul>
+        </section>
+
+        <section id="riesgos" class="card">
+          <h2>Riesgos comunes</h2>
+          <p>El trading algorítmico conlleva riesgos importantes; tener en cuenta:</p>
+          <ul class="check">
+            <li>Riesgo de mercado: pérdidas por movimientos de precios.</li>
+            <li>Riesgo tecnológico: bugs, latencia, o errores en integraciones API.</li>
+            <li>Riesgo de contraparte: plataformas no reguladas o prácticas opacas.</li>
+            <li>Suplantación y estafas: sitios que imitan marcas legítimas para confundir usuarios.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Señales de que una web puede ser problemática</h2>
+          <p>Atento a estas señales:</p>
+          <ul class="check">
+            <li>Presión para depositar dinero rápidamente o promesas de retornos garantizados.</li>
+            <li>Falta de información legal, ausencia de términos y condiciones o política de privacidad.</li>
+            <li>Uso de marcas conocidas sin permiso, o intentar simular ser la página oficial.</li>
+            <li>Solicitudes de credenciales sensibles por canales inseguros.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Buenas prácticas antes de usar un servicio</h2>
+          <ol style="color:var(--muted)">
+            <li>Verifica la identidad legal del proveedor y busca registros/empresa responsable.</li>
+            <li>Prueba con pequeñas cantidades y usa cuentas de demostración cuando sea posible.</li>
+            <li>Utiliza claves API con permisos limitados (solo trading, sin retiros) y activa 2FA.</li>
+            <li>Lee reseñas independientes y busca confirmaciones en fuentes públicas.</li>
+          </ol>
+        </section>
+
+        <section class="card disclaimer">
+          <strong>Descargo de responsabilidad:</strong> El contenido de esta página es informativo y educativo. No es asesoramiento financiero, legal ni profesional. US-TRADE no tiene relación ni afiliación con otros sitios o marcas mencionadas. Antes de tomar decisiones, consulta con un profesional competente y realiza tu propia investigación (DYOR).
+        </section>
+
+      </main>
+
+      <aside aria-labelledby="aside-title">
+        <h3 id="aside-title">Recursos rápidos</h3>
+        <div style="margin-bottom:10px;color:var(--muted)">
+          <strong>Checklist de verificación:</strong>
+          <ul class="check">
+            <li>¿Empresa identificable?</li>
+            <li>¿Política de privacidad y términos?</li>
+            <li>¿Reseñas independientes?</li>
+            <li>¿Opciones de contacto real?</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom:10px">
+          <a class="btn" href="#evaluar">Comprobar plataforma</a>
+        </div>
+
+        <div style="font-size:13px;color:var(--muted)">
+          <strong>Contacto</strong>
+          <p>Para reportes o preguntas: <em>contacto@us-trade.example</em> (direccion ficticia de muestra).</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© US-TRADE — Contenido informativo. No afiliado ni representante de empresas externas.</div>
+      <div style="margin-top:8px;color:var(--muted)">Última actualización: 19 de agosto de 2025</div>
+    </footer>
+  </div>
+</body>
+</html>
