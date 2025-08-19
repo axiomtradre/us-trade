@@ -3,155 +3,146 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>US-TRADE — Información responsable sobre trading algorítmico</title>
-  <meta name="description" content="US-TRADE: guía informativa sobre trading algorítmico, bots de trading y cómo evaluar proveedores - contenido neutro y no afiliado.">
+  <title>US-TRADE — Recursos, criterios y seguridad para trading automatizado</title>
+  <meta name="description" content="Recursos y criterios objetivos para evaluar bots de trading y plataformas: enfoque educativo, neutral y seguro.">
+  <meta name="author" content="US-TRADE">
   <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#9aa6b2; --accent:#0ea5a4; --glass: rgba(255,255,255,0.03);
-      --radius:14px; --maxw:1000px;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
+    /* Diseño totalmente distinto: tema claro, tipografía serif + sans, estructura de acordeón */
+    :root{--bg:#f7fafc;--card:#ffffff;--muted:#5b6b77;--accent:#1f6feb;--danger:#d9534f;--radius:12px;--maxw:900px}
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;background:linear-gradient(180deg,#07101a 0%, #071826 100%);color:#e6eef6;line-height:1.5}
-    .wrap{max-width:var(--maxw);margin:28px auto;padding:28px}
+    body{margin:0;background:var(--bg);font-family: 'Merriweather', Georgia, serif;color:#102027}
+    .container{max-width:var(--maxw);margin:36px auto;padding:24px}
 
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
-    .brand{display:flex;gap:14px;align-items:center}
-    .logo-blob{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#036b6a);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021018}
-    h1{font-size:20px;margin:0}
-    nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-size:14px}
+    header{display:flex;align-items:center;gap:16px}
+    .mark{background:linear-gradient(90deg,#e6f0ff, #dff4ff);padding:10px;border-radius:10px;font-weight:700;color:var(--accent)}
+    h1{margin:0;font-family: 'Inter', Arial, sans-serif;font-size:22px}
+    p.lead{color:var(--muted);margin:8px 0 20px}
 
-    .hero{background:var(--glass);padding:22px;border-radius:var(--radius);display:grid;grid-template-columns:1fr;gap:12px}
-    .hero p{margin:0;color:var(--muted)}
+    .intro{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(31,111,235,0.08)}
 
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
-    main{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
-    aside{background:rgba(255,255,255,0.02);padding:16px;border-radius:12px;height:fit-content}
+    /* Acordeón CSS-only */
+    .faq{margin-top:18px}
+    .faq-item{background:var(--card);border-radius:10px;margin-bottom:10px;overflow:hidden;border:1px solid rgba(16,32,39,0.04)}
+    .faq-item input{display:none}
+    .faq-item label{display:flex;justify-content:space-between;padding:14px 16px;cursor:pointer;font-weight:600}
+    .faq-item .content{max-height:0;padding:0 16px;color:var(--muted);transition:max-height .28s ease,padding .28s}
+    .faq-item input:checked ~ .content{max-height:400px;padding:12px 16px}
 
-    section h2{margin-top:0;color:#dff2f1}
-    .card{background:rgba(255,255,255,0.01);padding:14px;border-radius:12px;margin-bottom:12px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef7ff;color:var(--accent);font-weight:600;margin-right:8px}
 
-    ul.check{padding-left:18px;margin:10px 0;color:var(--muted)}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#021018;text-decoration:none;font-weight:600}
+    footer{margin-top:22px;color:var(--muted);font-size:13px}
 
-    .disclaimer{font-size:13px;color:#ffdfdf;background:rgba(255,223,223,0.04);padding:10px;border-radius:10px}
+    .tiny{font-size:13px;color:var(--muted)}
 
-    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+    .badge{display:inline-block;padding:6px 8px;border-radius:8px;background:#fff;border:1px solid rgba(16,32,39,0.04);font-size:13px}
 
-    @media (max-width:880px){
-      .grid{grid-template-columns:1fr}
-      .brand h1{font-size:18px}
-    }
+    @media (max-width:700px){.container{padding:16px}}
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="container">
     <header>
-      <div class="brand">
-        <div class="logo-blob">US</div>
-        <div>
-          <h1>US-TRADE</h1>
-          <div style="color:var(--muted);font-size:13px">Información neutra sobre trading algorítmico y evaluación de servicios</div>
-        </div>
+      <div class="mark">US-TRADE</div>
+      <div>
+        <h1>Recursos y criterios para evaluar herramientas de trading automatizado</h1>
+        <p class="lead">Contenido educativo y neutral pensado para ayudar a usuarios a identificar buenas prácticas y señales de alerta en plataformas y servicios.</p>
       </div>
-      <nav aria-label="navegación principal">
-        <a href="#sobre">Sobre</a>
-        <a href="#evaluar">Evaluar</a>
-        <a href="#riesgos">Riesgos</a>
-      </nav>
     </header>
 
-    <div class="hero" role="region" aria-labelledby="hero-title">
-      <div>
-        <h2 id="hero-title">Guía informativa — trading algorítmico y bots</h2>
-        <p>Esta página ofrece información general y buenas prácticas para entender qué son los bots de trading, cómo evaluar plataformas y reconocer señales de riesgos o suplantación. No somos afiliados ni representantes de ningún proveedor citado.</p>
+    <div class="intro">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <div class="pill">Neutro</div>
+          <div style="margin-top:8px;color:var(--muted)">No promocionamos ni representamos a proveedores. Información general; no constituye recomendación de inversión.</div>
+        </div>
+        <div class="badge tiny">Última revisión: 19 ago 2025</div>
+      </div>
+
+      <div style="margin-top:14px;color:var(--muted)">
+        <strong>En esta página:</strong> checklist práctico, preguntas clave para proveedores, señales de riesgo y referencias para verificar identidad de empresas.
       </div>
     </div>
 
-    <div class="grid">
-      <main>
-        <section id="sobre" class="card">
-          <h2>¿Qué es un bot de trading?</h2>
-          <p>Un bot de trading es un software que ejecuta órdenes de compra/venta automáticamente según reglas predefinidas (estrategias de momentum, arbitraje, market making, etc.). Pueden facilitar la ejecución 24/7, pero su desempeño depende de la estrategia, la calidad de datos y la infraestructura.</p>
-        </section>
+    <nav style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap">
+      <a href="#checklist" class="pill" style="text-decoration:none">Checklist</a>
+      <a href="#preguntas" class="pill" style="text-decoration:none">Preguntas clave</a>
+      <a href="#alertas" class="pill" style="text-decoration:none">Alertas</a>
+    </nav>
 
-        <section id="evaluar" class="card">
-          <h2>Cómo evaluar una plataforma o servicio</h2>
-          <p>A la hora de valorar un proveedor, busca pruebas y documentación verificable. Aquí tienes un listado práctico:</p>
-          <ul class="check">
-            <li>Transparencia: información sobre la empresa, responsables y condiciones legales.</li>
-            <li>Reputación: búsquedas en prensa independiente, foros y reseñas verificables.</li>
-            <li>Seguridad: uso de APIs con claves separadas, autenticación de dos factores, y almacenamiento de fondos propio (no custodial) cuando sea aplicable.</li>
-            <li>Condiciones comerciales: tarifas, comisiones y políticas de reembolso claras.</li>
-            <li>Pruebas técnicas: documentación, pruebas en modo demo o backtests reproducibles con datos públicos.</li>
+    <section id="checklist" class="faq" aria-label="checklist">
+      <div class="faq-item">
+        <input type="checkbox" id="f1">
+        <label for="f1">Checklist mínimo para comprobar un servicio</label>
+        <div class="content">
+          <ul>
+            <li>Registro legal verificable: nombre de la empresa y documento de registro (cuando corresponda).</li>
+            <li>Política de privacidad y términos de servicio accesibles y legibles.</li>
+            <li>Canales de contacto válidos: correo institucional, teléfono o dirección física verificable.</li>
+            <li>Detalles técnicos: explicación de cómo funciona el bot, riesgos y límites de uso.</li>
+            <li>Mecanismos de seguridad: 2FA, gestión de claves API con permisos separados, política frente a vulnerabilidades.</li>
           </ul>
-        </section>
+        </div>
+      </div>
 
-        <section id="riesgos" class="card">
-          <h2>Riesgos comunes</h2>
-          <p>El trading algorítmico conlleva riesgos importantes; tener en cuenta:</p>
-          <ul class="check">
-            <li>Riesgo de mercado: pérdidas por movimientos de precios.</li>
-            <li>Riesgo tecnológico: bugs, latencia, o errores en integraciones API.</li>
-            <li>Riesgo de contraparte: plataformas no reguladas o prácticas opacas.</li>
-            <li>Suplantación y estafas: sitios que imitan marcas legítimas para confundir usuarios.</li>
+      <div class="faq-item">
+        <input type="checkbox" id="f2">
+        <label for="f2">Pruebas que puedes pedir (sin compartir credenciales)</label>
+        <div class="content">
+          <ul>
+            <li>Acceso a documentos o páginas públicas con pruebas técnicas y resultados de backtests reproducibles.</li>
+            <li>Demostraciones en modo simulación o cuentas de sólo lectura para inspeccionar operaciones históricas.</li>
+            <li>Informes de auditoría o revisiones técnicas por terceros si existen.</li>
           </ul>
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <section class="card">
-          <h2>Señales de que una web puede ser problemática</h2>
-          <p>Atento a estas señales:</p>
-          <ul class="check">
-            <li>Presión para depositar dinero rápidamente o promesas de retornos garantizados.</li>
-            <li>Falta de información legal, ausencia de términos y condiciones o política de privacidad.</li>
-            <li>Uso de marcas conocidas sin permiso, o intentar simular ser la página oficial.</li>
-            <li>Solicitudes de credenciales sensibles por canales inseguros.</li>
-          </ul>
-        </section>
-
-        <section class="card">
-          <h2>Buenas prácticas antes de usar un servicio</h2>
-          <ol style="color:var(--muted)">
-            <li>Verifica la identidad legal del proveedor y busca registros/empresa responsable.</li>
-            <li>Prueba con pequeñas cantidades y usa cuentas de demostración cuando sea posible.</li>
-            <li>Utiliza claves API con permisos limitados (solo trading, sin retiros) y activa 2FA.</li>
-            <li>Lee reseñas independientes y busca confirmaciones en fuentes públicas.</li>
+    <section id="preguntas" style="margin-top:12px">
+      <div class="faq-item">
+        <input type="checkbox" id="f3">
+        <label for="f3">Preguntas clave que hacer al proveedor</label>
+        <div class="content">
+          <ol>
+            <li>¿Quiénes son los responsables legales y cómo los verifico?</li>
+            <li>¿Qué permisos requieren las claves API y por qué?</li>
+            <li>¿Cómo manejan incidentes de seguridad y qué historial tienen?</li>
+            <li>¿Ofrecen periodos de prueba o cuentas demo?</li>
+            <li>¿Cuál es su política sobre reembolsos y responsabilidades?</li>
           </ol>
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <section class="card disclaimer">
-          <strong>Descargo de responsabilidad:</strong> El contenido de esta página es informativo y educativo. No es asesoramiento financiero, legal ni profesional. US-TRADE no tiene relación ni afiliación con otros sitios o marcas mencionadas. Antes de tomar decisiones, consulta con un profesional competente y realiza tu propia investigación (DYOR).
-        </section>
-
-      </main>
-
-      <aside aria-labelledby="aside-title">
-        <h3 id="aside-title">Recursos rápidos</h3>
-        <div style="margin-bottom:10px;color:var(--muted)">
-          <strong>Checklist de verificación:</strong>
-          <ul class="check">
-            <li>¿Empresa identificable?</li>
-            <li>¿Política de privacidad y términos?</li>
-            <li>¿Reseñas independientes?</li>
-            <li>¿Opciones de contacto real?</li>
+    <section id="alertas" style="margin-top:12px">
+      <div class="faq-item">
+        <input type="checkbox" id="f4">
+        <label for="f4">Señales de alerta (si ves esto, procede con cautela)</label>
+        <div class="content">
+          <ul>
+            <li>Publicidad con promesas de ganancias fijas o garantizadas.</li>
+            <li>Solicitudes de credenciales completas (usuario + contraseña) en páginas no oficiales.</li>
+            <li>Falta de documentación legal o evasión al pedir aclaraciones sobre tarifas.</li>
+            <li>Presión para enviar fondos inmediatamente o para usar servicios de terceros opacos.</li>
+            <li>Reclamaciones públicas sin fuentes verificables o testimonios anónimos sin evidencia.</li>
           </ul>
         </div>
+      </div>
+    </section>
 
-        <div style="margin-bottom:10px">
-          <a class="btn" href="#evaluar">Comprobar plataforma</a>
-        </div>
-
-        <div style="font-size:13px;color:var(--muted)">
-          <strong>Contacto</strong>
-          <p>Para reportes o preguntas: <em>contacto@us-trade.example</em> (direccion ficticia de muestra).</p>
-        </div>
-      </aside>
-    </div>
+    <section style="margin-top:18px;background:#fff;border-radius:10px;padding:14px;border:1px solid rgba(16,32,39,0.04)">
+      <h3 style="margin-top:0">Recursos de verificación</h3>
+      <p class="tiny">Sugerencias rápidas:</p>
+      <ul class="tiny">
+        <li>Consulta registros mercantiles y listas de empresas registradas en la jurisdicción correspondiente.</li>
+        <li>Busca menciones en medios independientes y reportes técnicos.</li>
+        <li>Verifica las políticas de privacidad y si usan proveedores conocidos para alojamiento y correo.</li>
+      </ul>
+      <p class="tiny" style="margin-top:8px">Si dudas de la legitimidad de una página que imita una marca, considera reportarla a los canales de la plataforma anfitriona (ej. el proveedor del dominio) y a servicios de navegación segura.</p>
+    </section>
 
     <footer>
-      <div>© US-TRADE — Contenido informativo. No afiliado ni representante de empresas externas.</div>
-      <div style="margin-top:8px;color:var(--muted)">Última actualización: 19 de agosto de 2025</div>
+      <div class="tiny" style="margin-top:18px">Aviso: Este sitio ofrece contenido educativo y no constituye consejo financiero ni legal. No existe relación, autorización ni afiliación con terceros. Para acciones legales o reclamaciones, dirígete a los canales oficiales correspondientes.</div>
+      <div style="margin-top:8px" class="tiny">Política de privacidad | Términos de uso (páginas de ejemplo disponibles)</div>
     </footer>
   </div>
 </body>
